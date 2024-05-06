@@ -1,0 +1,58 @@
+
+
+  <nav class="navbar navbar-light bg-light">
+    <div class="container">
+        <img src="../../assets/3s.png" width="100" height="50" style="margin-left: 45%;" alt="">
+    </div>
+</nav>
+
+<div class="container mt-5">
+    <h2>Add New Instructor</h2>
+    <div>
+        <div class="submit-form">
+          <div *ngIf="!submitted">
+            <div class="form-group">
+              <label for="title">FirstName</label>
+              <input
+                type="text"
+                class="form-control"
+                id="firstName"
+                required
+                [(ngModel)]="instructor.firstName"
+                name="FirstName"
+              />
+            </div>
+      
+            <div class="form-group">
+              <label for="lastName">LastName</label>
+              <input
+                class="form-control"
+                id="lastName"
+                required
+                [(ngModel)]="instructor.lastName"
+                name="LastName"
+              />
+            </div>
+            <div class="form-group">
+                <label for="dateOfHire">DateOfHire</label>
+                <input
+                  class="form-control"
+                  type="date"
+                  id="dateOfHire"
+                  required
+                  [(ngModel)]="instructor.dateOfHire"
+                  name="DateOfHire"
+                />
+              </div>
+      
+            <button (click)="saveInstructor()" class="btn btn-success" style="margin-top: 20px;">create</button>
+          </div>
+      
+          <!-- <div *ngIf="submitted">
+            <h4>Tutorial was submitted successfully!</h4>
+            <button class="btn btn-success" (click)="newTutorial()">Add</button>
+          </div> -->
+        </div>
+      </div>
+    
+</div>
