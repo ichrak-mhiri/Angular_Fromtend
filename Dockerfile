@@ -1,5 +1,5 @@
 # Utiliser l'image Node.js
-FROM node:latest
+FROM node:16.14 
 
 # Définir le répertoire de travail
 WORKDIR /usr/src/app
