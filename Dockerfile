@@ -17,7 +17,7 @@ RUN npm install
 COPY . .
 
 # Exposer le port 4200 utilisé par Angular CLI
-EXPOSE 4200
+EXPOSE 4300
 
 # Commande par défaut pour exécuter ng serve
 CMD ["ng", "serve", "--host", "0.0.0.0", "--port", "4300"]
