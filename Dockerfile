@@ -16,10 +16,8 @@ RUN npm install
 # Copier le reste des fichiers de l'application
 COPY . .
 
-# Construire l'application Angular pour la production
-RUN ng build --configuration=production
-# Exposer le port 4300 utilisé par Angular
-EXPOSE 4300
+# Exposer le port 4200 utilisé par Angular CLI
+EXPOSE 4200
 
-# Commande par défaut pour servir les fichiers statiques de l'application Angular
-CMD ["npx", "http-server", "./dist"]
+# Commande par défaut pour exécuter ng serve
+CMD ["ng", "serve", "--host", "0.0.0.0", "--port", "4200"]
